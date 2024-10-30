@@ -1,0 +1,10 @@
+{
+  "posts": [
+    { "id": 1, "title": "First Post", "author": "John Doe" },
+    { "id": 2, "title": "Second Post", "author": "Jane Doe" }
+  ],
+  "comments": [
+    { "id": 1, "body": "This is great!", "postId": 1 },
+    { "id": 2, "body": "Nice article!", "postId": 1 }
+  ]
+}

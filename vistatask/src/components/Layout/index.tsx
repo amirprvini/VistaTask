@@ -1,12 +1,11 @@
 import React from 'react'
 import Header from './SideBar'
 import { Outlet } from 'react-router-dom'
-import Container from '../Container'
 
 const LayOut: React.FC = (): JSX.Element => {
-  return <div className='layOutWrapper flex h-full w-full'>
+  return <div className='layOutWrapper flex h-full w-full bg-gray-100'>
         <Header/>
-        <Container> <Outlet/> </Container>
+        <Outlet/>
     </div>
 }
 

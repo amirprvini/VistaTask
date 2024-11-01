@@ -28,7 +28,6 @@ const ProductsHeader: React.FC = (): JSX.Element =>{
 
     const location = useLocation(); 
     const currentPath = location.pathname;
-    // const navigate = useNavigate();
 
   return <header className="ProductsHeader mt-5 px-5 flex justify-around bg-white text-black min-h-20 w-4/5 border-b-2 border-b-neutral-300 rounded-lg shadow-md">
 

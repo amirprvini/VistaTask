@@ -60,12 +60,6 @@ const ImageUploadButton: React.FC = () => {
           <p className="fontBold">Choose photo...</p>
         </button>
       </label>
-      {/* {selectedImage && (
-        <div>
-          <p>Selected File: {selectedImage.name}</p>
-          <button onClick={handleUpload}>Upload Image</button>
-        </div>
-      )} */}
     </div>
   );
 };

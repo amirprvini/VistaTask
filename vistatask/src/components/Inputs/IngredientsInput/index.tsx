@@ -14,11 +14,11 @@ const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
 
 const handleAddClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault()
-    event.stopPropagation(); // Prevent event from propagating
+    event.stopPropagation(); 
 
   if (inputValue.trim()) {
-    onComplete(inputValue); // Call the provided onComplete handler
-    setInputValue(""); // Clear the input field
+    onComplete(inputValue);
+    setInputValue(""); 
   }
 };
 
@@ -41,7 +41,6 @@ const handleAddClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         </button>
       </div>
 
-      {/* Display added ingredients */}
       <div className="mt-4">
         <h3>Ingredients:</h3>
         <ul className="ingredientsList min-h-10 p-2 flex gap-2 flex-wrap border border-neutral-300">

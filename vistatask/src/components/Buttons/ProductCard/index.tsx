@@ -1,4 +1,5 @@
-import React from 'react'
+import { useContext } from "react";
+import { AppContext } from "../../../context/store";
 
 interface ProductCardProps {
     id: number
@@ -6,17 +7,41 @@ interface ProductCardProps {
     price : string , 
     image : string , 
     weight: string , 
-    materials: string , 
+    calories: string ,
+    ingredients: string[],
+    vagan: boolean ,
     readOnly: boolean ,
     onClickProp ?: ()=> void
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({title,price,image,weight,materials,onClickProp}): JSX.Element => {
-  return <div className='productCardWrapper cursor-pointer hover:scale-105 transition-all duration-150 w-80 bg-white border-2 border-neutral-200 rounded-md shadow-md text-black font-mono flex flex-col items-center' 
+const ProductCard: React.FC<ProductCardProps> = ({vagan,title,id,price,calories,image,weight,ingredients,readOnly,onClickProp}): JSX.Element => {
+
+    
+    const {setIsClicked,setOpenEditModal,setTargetedProduct} = useContext(AppContext);
+      
+    const handleEditButton = ()=>{
+        setIsClicked(false);
+        setOpenEditModal(true);
+        setTargetedProduct({
+
+    id:id , 
+    image: image , 
+    title : title , 
+    weight: weight   ,
+    price: price , 
+    calories: calories, 
+    ingredients: ingredients , 
+    vegan : vagan,
+    readOnly: readOnly
+
+} , )
+    }
+
+    return <div className='productCardWrapper cursor-pointer hover:scale-105 transition-all duration-150 w-80 bg-white border-2 border-neutral-200 rounded-xl shadow-md text-black font-mono flex flex-col items-center py-5' 
   onClick={onClickProp}>
 
-    <div className="productImgWrapper bg-white">
-        <img src={image} alt="ProductPhoto"/>
+    <div className="productImgWrapper bg-white px-3 flex justify-center items-center">
+        <img src={image} alt="ProductPhoto" width={"150px"}/>
     </div>
 
     <div className="productInfoWrapper h-min w-full flex flex-col justify-between px-4 font-dana my-7">
@@ -29,26 +54,26 @@ const ProductCard: React.FC<ProductCardProps> = ({title,price,image,weight,mater
             <p className="productWeight text-xl text-gray-600"> {weight}g </p>
         </div>
 
-        <div className="productMaterialsWrapper w-full flex justify-center">
-            <p className="productMaterials text-lg flex flex-wrap text-center text-gray-600"> {materials} </p>
+        <div className="productMaterialsWrapper w-full flex justify-center h-12">
+            <p className="productMaterials text-lg flex flex-wrap text-center text-gray-600"> {ingredients.join(", ")} </p>
         </div>
 
     </div>
 
-    <div className="productCardFooter w-full flex justify-between px-6">
+    <div className="productCardFooter w-full flex items-center justify-between px-6">
         
         <div className="productPriceWrapper h-full flex justify-end items-end font-dana">
-            <h2 className="productPrice text-xl"> $<span className='font-bold'>{price}</span></h2>
+            <h2 className="productPrice text-2xl"> $<span className='font-bold'>{price}</span></h2>
         </div>
 
         <div className="footerButtonsWrapper flex justify-center items-center gap-3">
             
-            <button className="readOnlyButton">
-                <img src="https://img.icons8.com/?size=100&id=60022&format=png&color=000000" alt="readOnlyButton" width={"40px"} />
+            <button className="readOnlyButton p-3 rounded-md border border-neutral-300 ">
+                <img src="https://img.icons8.com/?size=100&id=60022&format=png&color=000000" alt="readOnlyButton" width={"25px"} />
             </button>
 
-            <button className="moreInfoButton">
-                <img src="https://img.icons8.com/?size=100&id=2969&format=png&color=000000" alt="moreInfo" width={"40px"} />
+            <button className="editInfoButton p-3 rounded-md border border-neutral-300 " onClick={handleEditButton}>
+                <img src="https://img.icons8.com/?size=100&id=2969&format=png&color=000000" alt="moreInfo" width={"25px"} />
             </button>
 
         </div>

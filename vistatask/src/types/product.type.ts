@@ -4,7 +4,14 @@ export interface productType {
     title : string , 
     weight: string ,
     price: string ,
-    materials: string , 
+    calories:string
+    ingredients: string[] , 
+    vegan : boolean ,
     readOnly:boolean
 }
 
+export interface productsListType {
+    categoryName: string ,
+    originalProductsList: productType[] ,
+    filteredProductsList: productType[] 
+}

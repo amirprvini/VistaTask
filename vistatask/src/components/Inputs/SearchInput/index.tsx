@@ -1,17 +1,48 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { AppContext } from '../../../context/store';
+import { useLocation } from 'react-router-dom';
+import { useAppDispatch, useApplicationSelector } from '../../../redux/store';
+import { filterProducts } from '../../../redux/features/tasks/productsSlice';
 
 const SearchInput: React.FC = (): JSX.Element => {
+
   const [query, setQuery] = useState<string>('');
+  const {setSerachInputValue,setIsFocuced} = useContext(AppContext);
+  const location = useLocation(); 
+  const currentPath = location.pathname;
+  const filterProductsDispatch = useAppDispatch();
+  const reduxState = useApplicationSelector(state=>state);
+ 
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    setQuery(e.target.value);
+    setSerachInputValue(e.target.value);
+    filterProductsDispatch(filterProducts({
+      categoryName: currentPath.slice(10) , 
+      searchInputVal: e.target.value
+    }))
+
+
+    console.log('redx state: ' , reduxState);
+  };
 
   const handleSearch = () => {
     if (query) {
       alert(`Searching for: ${query}`);
-      // Here you can implement your search logic (API call, filtering, etc.)
     } else {
       alert('Please enter a search term');
     }
+
+  };
+
+  const handleFocus = () => {
+    setIsFocuced(true)
+  };
+
+  const handleBlur = () => {
+    setIsFocuced(false);
   };
 
   return (
@@ -20,7 +51,9 @@ const SearchInput: React.FC = (): JSX.Element => {
       <input
         type="text"
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+        onChange={handleChange}
         placeholder="Search"
         className="w-full bg-gray-100 p-3 pl-10 border rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-center placeholder:text-black placeholder:font-bold"
       />

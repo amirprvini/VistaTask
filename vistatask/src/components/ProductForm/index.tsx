@@ -69,7 +69,7 @@ const handleCloseForm = (e: React.FormEvent): void => {
   setIsClicked(false);
 };
 
-  return <form onSubmit={formik.handleSubmit} className={`productForm flex flex-col justify-around gap-3 bg-white rounded-sm py-6 px-8 text-black h-100vh w-[430px] h-screen transition ease-linear delay-300 overflow-auto`}>
+  return <form onSubmit={formik.handleSubmit} className={`productForm flex flex-col justify-around gap-3 bg-white rounded-sm py-6 px-8 text-black h-100vh w-[430px] h-screen transition ease-linear delay-300`}>
     <header className="formHeader w-full flex justify-between">
         <div className="headerTitleWrapper">
             <h3 className="formHaderTitle text-2xl text-gray-900">
@@ -84,7 +84,7 @@ const handleCloseForm = (e: React.FormEvent): void => {
 
     <div className="productNameWrapper flex flex-col">
         <label htmlFor="title font-bold text-lg" className='font-semibold text-lg text-gray-700'>Name of the product</label>
-        <input onChange={formik.handleChange} value={formik.values.title} type="text" name='title' id='title' className='w-full pl-3 mt-2 h-14 rounded-md border-2 border-neutral-300'/>
+        <input onChange={formik.handleChange} value={formik.values.title} type="text" name='title' id='title' className='w-full pl-3 mt-2 h-12 rounded-md border-2 border-neutral-300'/>
     </div>
 
     <div className="productIngredientsWrapper">
@@ -108,11 +108,11 @@ const handleCloseForm = (e: React.FormEvent): void => {
 
         <div className='wightWrapper w-5/6 flex flex-col'>
             <label htmlFor="weight" className='font-semibold text-lg text-gray-700'>Weight in grams</label>
-            <input onChange={formik.handleChange} value={formik.values.weight} type="text" name='weight' id='weight' className='w-full pl-3 mt-2 h-14 rounded-md border-2 border-neutral-300'/>
+            <input onChange={formik.handleChange} value={formik.values.weight} type="text" name='weight' id='weight' className='w-full pl-3 mt-2 h-12 rounded-md border-2 border-neutral-300'/>
         </div>
         <div className='caloriesWrapper w-5/6 flex flex-col'>
             <label htmlFor="calories" className='font-semibold text-lg text-gray-700'>Calories</label>
-            <input onChange={formik.handleChange} value={formik.values.calories} type="text" name='calories' id='calories' className='w-full mt-2 pl-3 h-14 rounded-md border-2 border-neutral-300'/>
+            <input onChange={formik.handleChange} value={formik.values.calories} type="text" name='calories' id='calories' className='w-full mt-2 pl-3 h-12 rounded-md border-2 border-neutral-300'/>
         </div>
     </div>
 
@@ -122,7 +122,7 @@ const handleCloseForm = (e: React.FormEvent): void => {
         <div className="relative w-full">
             <span className="absolute mr-3 pt-2 inset-y-0 left-0 flex items-center pl-6 text-gray-900 font-bold text-lg">$</span>
             <input onChange={formik.handleChange} value={formik.values.price} type="text" name="price" id="price" 
-            className="pl-10 w-full text-lg mt-2 h-14 rounded-md border-2 border-neutral-300 focus:outline-none focus:ring-2 focus:ring-black" />
+            className="pl-10 w-full text-lg mt-2 h-12 rounded-md border-2 border-neutral-300 focus:outline-none focus:ring-2 focus:ring-black" />
         </div>
 
     </div>

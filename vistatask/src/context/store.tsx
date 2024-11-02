@@ -10,6 +10,8 @@ interface AppContextState{
     setIsFocuced: (isFocuced:boolean)=> void , 
     openEditModal : boolean ,
     setOpenEditModal: (openEditMoadl:boolean)=> void  , 
+    openInfoModal: boolean , 
+    setOpenInfoModal: (openInfoModal: boolean)=> void ,
     targetedProduct: productType , 
     setTargetedProduct: (pro:productType)=> void
 }
@@ -23,6 +25,8 @@ export const AppContext = createContext<AppContextState>({
   setIsFocuced: ()=>{} , 
   openEditModal : false ,
   setOpenEditModal: ()=> {} ,
+  openInfoModal: false , 
+  setOpenInfoModal: ()=>{} ,
   targetedProduct: {
 
     id:0 , 
@@ -49,6 +53,7 @@ export const ContextProvider:React.FC<IContextProvider> = ({children}): JSX.Elem
   const [serachInputValue,setSerachInputValue] = useState<string>("");
   const [isFocuced,setIsFocuced] = useState<boolean>(false);
   const [openEditModal,setOpenEditModal] = useState<boolean>(false);
+  const [openInfoModal,setOpenInfoModal] = useState<boolean>(false);
   const [targetedProduct,setTargetedProduct] = useState<productType>({
 
     id:0 , 
@@ -75,6 +80,8 @@ export const ContextProvider:React.FC<IContextProvider> = ({children}): JSX.Elem
             setIsFocuced , 
             openEditModal , 
             setOpenEditModal ,  
+            openInfoModal ,
+            setOpenInfoModal ,
             targetedProduct , 
             setTargetedProduct
     }}>

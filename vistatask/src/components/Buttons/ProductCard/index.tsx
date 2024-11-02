@@ -20,11 +20,27 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = ({vagan,title,id,price,calories,image,weight,ingredients,readOnly,onClickProp}): JSX.Element => {
 
     const dispatch = useAppDispatch();
-    const {setIsClicked,setOpenEditModal,setTargetedProduct} = useContext(AppContext);
+    const {setIsClicked,setOpenEditModal,setTargetedProduct,setOpenInfoModal} = useContext(AppContext);
     const location = useLocation(); 
     const currentPath = location.pathname;
     
     const handleReadOnly = ()=>{
+        setOpenInfoModal(true);
+
+     setTargetedProduct({
+
+        id:id , 
+        image: image , 
+        title : title , 
+        weight: weight   ,
+        price: price , 
+        calories: calories, 
+        ingredients: ingredients , 
+        vegan : vagan,
+        readOnly: readOnly
+
+    })
+
         dispatch(editProduct({
             categoryName: currentPath.slice(10) , 
             product: {

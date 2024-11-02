@@ -1,52 +1,6 @@
-// import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-// import { productType } from "../../../types/product.type";
-
-// const initialProducts: productType[] = Array.from({ length: 5 }, (_, index) => ({
-//   id: index + 1,
-//   image: "/images/vecteezy_beef-burger-cutout_23522925.png",
-//   title: "Cheese Burger",
-//   weight: "150",
-//   price: "22.37",
-//   calories: "",
-//   ingredients: [
-//     "Cheese Burger cheese",
-//     "Lettuce",
-//     "Tomato",
-//     "Onion",
-//     "Pickles",
-//     "Burger Patty",
-//   ],
-//   vegan: false,
-//   readOnly: false,
-// }));
-
-// export interface ProductsListState {
-//   productsList: productType[];
-// }
-
-// export const productsSlice = createSlice({
-//   name: "productsList",
-//   initialState: {
-//     productsList: initialProducts,
-//   } as ProductsListState,
-
-//   reducers: {
-//     addProduct: (state, action: PayloadAction<productType>) => {
-//       state.productsList.push(action.payload);
-//     },
-//   },
-// });
-
-// export const { addProduct } = productsSlice.actions;
-// export default productsSlice.reducer;
- 
-
-
-// Import necessary functions and types
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { productType, productsListType } from "../../../types/product.type";
 
-// Define the initial products list with the specified categories
 const initialProductsList: productsListType[] = [
   {
     categoryName: "maincourses",

@@ -18,7 +18,7 @@ const ProductItems: React.FC = (): JSX.Element => {
   }
   
 
-  return <ul className="productsList w-full px-4 py-2 flex flex-wrap justify-center gap-4">
+  return <ul className="productsList w-full px-10 py-2 flex flex-wrap justify-center gap-x-6 gap-y-10">
     {reduxState.productsList.categories.map((categoryList:productsListType)=>{
           console.log('current path: ' , currentPath.slice(10));
         if(currentPath.includes(categoryList.categoryName.toLowerCase())){

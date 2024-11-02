@@ -7,7 +7,7 @@ export default {
     extend: {
 
       width: {
-        'calc-100-minus-14rem': 'calc(100% - 14rem)', // Custom width utility
+        'calc-100-minus-14rem': 'calc(100% - 16rem)', // Custom width utility
       },
 
       fontFamily: {
@@ -18,6 +18,10 @@ export default {
       'body': ['"Open Sans"'],
       'Poppins' : ["Poppins" , "sans"],
     },
+
+    colors: {
+        sideBarButtonColor: "#D7D7D7" ,
+      }
       
     },
   },

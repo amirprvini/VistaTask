@@ -46,7 +46,7 @@ const SearchInput: React.FC = (): JSX.Element => {
   };
 
   return (
-    <div className="relative w-4/5 mx-auto bg-gray-100 rounded-xl">
+    <div className="relative w-[95%] mx-auto bg-gray-100 rounded-md">
       
       <input
         type="text"
@@ -55,7 +55,7 @@ const SearchInput: React.FC = (): JSX.Element => {
         onBlur={handleBlur}
         onChange={handleChange}
         placeholder="Search"
-        className="w-full bg-gray-100 p-3 pl-10 border rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-center placeholder:text-black placeholder:font-bold"
+        className="w-full bg-gray-100 p-3 pl-10 border-b-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:bg-white placeholder:text-center placeholder:text-gray-700 placeholder:font-semibold"
       />
 
       <button

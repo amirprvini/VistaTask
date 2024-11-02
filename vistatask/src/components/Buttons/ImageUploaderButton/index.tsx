@@ -49,7 +49,7 @@ const ImageUploadButton: React.FC = () => {
       />
       <label htmlFor="file-input">
         <button
-          className="chooseBtnWrapper bg-gray-400 flex justify-around items-center py-2 px-4 rounded-sm text-black"
+          className="chooseBtnWrapper bg-gray-200 flex justify-around items-center py-3 px-10 rounded-md text-black"
           onClick={handleUpload}
         >
           <img
@@ -57,7 +57,7 @@ const ImageUploadButton: React.FC = () => {
             alt="uploadIcon"
             width={"20px"}
           />
-          <p className="fontBold">Choose photo...</p>
+          <p className="fontBold ml-4 font-semibold text-gray-800">Choose photo...</p>
         </button>
       </label>
     </div>

@@ -11,7 +11,7 @@ const ProductsPage: React.FC = (): JSX.Element => {
 
   const {isClicked,openEditModal,openInfoModal} = useContext(AppContext);
     
-  return <div className='productsPageWrapper py-5 flex flex-col gap-5 items-center w-calc-100-minus-14rem'>
+  return <div className='productsPageWrapper ml-auto py-5 flex flex-col gap-5 items-center w-calc-100-minus-14rem'>
      <div className="searchInputWrapper w-full"> <SearchInput/> </div>
      <div className="headerWrapper w-full flex justify-center"> <ProductsHeader/> </div>
      <div className="productsListWrapper w-full flex justify-center"> <ProductItems /> </div>

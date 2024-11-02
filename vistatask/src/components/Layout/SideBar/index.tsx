@@ -45,7 +45,7 @@ const SideBar: React.FC = (): JSX.Element =>{
     useEffect(()=>{
     },[])
 
-  return <div className="sideBar flex flex-col justify-start py-4 gap-3 bg-white text-black h-full w-56 border-r-2 border-r-neutral-300 rounded-sm shadow-md sticky top-0">
+  return <div className="sideBar flex flex-col justify-start py-4 gap-3 bg-white text-black h-full w-56 border-r-2 border-r-neutral-300 rounded-sm shadow-md fixed top-0 left-0 mr-auto">
 
         <header className="sideBarHeaderWrapper w-full h-16 flex justify-center items-center gap-1">
             <div className="sideBarHeader w-full h-full flex gap-1 justify-center items-center" onClick={handleSideBarLogoClick}>

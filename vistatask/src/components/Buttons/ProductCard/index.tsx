@@ -76,15 +76,15 @@ const ProductCard: React.FC<ProductCardProps> = ({vagan,title,id,price,calories,
 
     })}
 
-    return <div className='productCardWrapper min-h-80 relative cursor-pointer hover:scale-105 transition-all duration-150 w-80 bg-white rounded-2xl shadow-md text-black font-sans flex flex-col items-center justify-around py-5' 
+    return <div className='productCardWrapper min-h-80 relative cursor-pointer hover:scale-105 transition-all duration-150 w-72 bg-white rounded-2xl shadow-md text-black font-sans flex flex-col items-center justify-around py-5' 
   onClick={onClickProp}>
 
-    <div className="veganWrapper w-full flex justify-end px-8 h-8">
-        {vagan ? <img src="https://img.icons8.com/?size=100&id=O63wamyU8HXl&format=png&color=000000" alt="veganIcon" width={"40px"} /> : null}
+    <div className="veganWrapper w-full flex justify-end px-3 h-8 relative">
+        {vagan ? <img src="https://img.icons8.com/?size=100&id=O63wamyU8HXl&format=png&color=000000" alt="veganIcon" width={"30px"} className="absolute -top-4 right-5" /> : null}
     </div>
 
     <div className="productImgWrapper bg-white px-3 flex justify-center items-center mb-5">
-        <img src={image} alt="ProductPhoto" width={"150px"} className="absolute -top-9"/>
+        <img src={image} alt="ProductPhoto" width={"150px"} className="absolute -top-8"/>
     </div>
 
     <div className="productInfoWrapper h-min w-full flex flex-col justify-between px-4 font-dana my-7">
@@ -105,7 +105,7 @@ const ProductCard: React.FC<ProductCardProps> = ({vagan,title,id,price,calories,
 
     <div className="productCardFooter w-full flex items-center justify-between px-10">
         
-        <div className="productPriceWrapper h-full flex justify-end items-end font-sans text-neutral-900">
+        <div className="productPriceWrapper h-full flex justify-end items-end font-sans text-neutral-950">
             <h2 className="productPrice text-2xl"> $<span className='font-semibold'>{price}</span></h2>
         </div>
 

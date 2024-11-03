@@ -9,27 +9,27 @@ const SideBar: React.FC = (): JSX.Element =>{
     const sideBarButtonsData = [
     {
         title:"Dashbord" , 
-        icon:'https://img.icons8.com/fluency-systems-filled/25/dashboard-layout.png' ,
+        icon:'https://img.icons8.com/material/100/dashboard-layout.png' ,
         navigateTo: "/dashbord" 
     },
     {
         title:"Orders" , 
-        icon:'https://img.icons8.com/ios-glyphs/30/shopping-bag.png' ,
+        icon:'https://img.icons8.com/ios-glyphs/100/shopping-bag.png' ,
         navigateTo: "/orders" 
     },
     {
         title:"Products" , 
-        icon:'https://img.icons8.com/ios-glyphs/25/package.png' ,
+        icon:'https://img.icons8.com/ios-glyphs/100/beefburger.png' ,
         navigateTo: "/products/maincourses" 
     },
     {
         title:"Restaurants" , 
-        icon:'https://img.icons8.com/glyph-neue/25/marker--v1.png' ,
+        icon:'https://img.icons8.com/glyph-neue/100/marker--v1.png' ,
         navigateTo: "/restaurants" 
     },
     {
         title:"Drivers" , 
-        icon:'https://img.icons8.com/ios-filled/25/driver.png' ,
+        icon:'https://img.icons8.com/ios-filled/100/driver.png' ,
         navigateTo: "/drivers" 
     },
 ]
@@ -50,7 +50,7 @@ const SideBar: React.FC = (): JSX.Element =>{
         <header className="sideBarHeaderWrapper w-full h-16 flex justify-center items-center gap-1">
             <div className="sideBarHeader w-full h-full flex gap-2 justify-center items-center" onClick={handleSideBarLogoClick}>
                 <img src="https://img.icons8.com/?size=100&id=HzfMBDFej7au&format=png&color=000000" alt="logoIcon" width={"30px"}/>
-                <h1 className="headerTitle font-bold text-xl text-neutral-600"> avoburger </h1>
+                <h1 className="headerTitle font-bold text-xl text-neutral-900"> avoburger </h1>
             </div>
         </header>
 
@@ -62,16 +62,16 @@ const SideBar: React.FC = (): JSX.Element =>{
 
         <footer className="sideBarFooter w-full flex flex-col justify-center gap-8 sticky mt-auto">
             <div className="top flex flex-col justify-center px-6">
-                <p className="text-center text-neutral-600 font-semibold">Done for the day?</p>
-                <button className="flex items-center font-semibold justify-center mt-2 px-2 py-3 text-white rounded-lg bg-gradient-to-r from-emerald-300 to-green-500 hover:from-green-500 hover:to-green-700 focus:outline-none">
+                <p className="text-center text-neutral-800 font-semibold mb-1">Done for the day?</p>
+                <button className="flex items-center justify-center mt-2 px-2 py-3 text-white rounded-lg bg-gradient-to-r from-emerald-400 to-green-400 hover:from-green-500 hover:to-green-700 focus:outline-none">
                 <FontAwesomeIcon icon={faPaperPlane} className="mr-2" />
                     Send daily report
                 </button>
             </div>
 
-            <div className="avatarWrapper flex justify-around items-center pt-3 pb-1 px-2 border-t-[1px] border-neutral-200">
-                <img src="https://img.icons8.com/?size=100&id=108652&format=png&color=000000" alt="avatar" width={"50px"} />
-                <p className="username text-gray-700 font-semibold text-lg"> Amir Parvini </p>
+            <div className="avatarWrapper flex justify-around items-center pt-3 pb-1 px-3 border-t-[1px] border-neutral-200">
+                <img src="https://img.icons8.com/?size=100&id=108652&format=png&color=000000" alt="avatar" width={"55px"} />
+                <p className="username text-neutral-900 font-semibold text-lg"> Amir Parvini </p>
                 <img src="https://img.icons8.com/ios-filled/30/menu-2.png" alt="menuIcon"/>
             </div>
         </footer>

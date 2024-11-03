@@ -92,23 +92,23 @@ const ProductCard: React.FC<ProductCardProps> = ({vagan,title,id,price,calories,
     <div className="productInfoWrapper h-min w-full flex flex-col justify-between px-4 font-dana my-7">
 
         <div className="productTitleWrapper w-full flex justify-center">
-            <h1 className="productTitle text-xl font-bold text-center text-neutral-900"> {title} </h1>
+            <h1 className="productTitle text-xl font-bold font-poppins text-center text-neutral-900"> {title} </h1>
         </div>
 
         <div className="productWeightWrapper w-full flex justify-center">
-            <p className="productWeight text-md text-neutral-600 font-semibold "> {weight} </p>
+            <p className="productWeight text-lg text-neutral-600 font-semibold font-montserrat"> {weight} </p>
         </div>
 
         <div className="productMaterialsWrapper w-full flex justify-center h-12">
-            <p className="productMaterials text-lg flex flex-wrap text-center font-sans font-semibold text-neutral-800"> {ingredients.join(", ")} </p>
+            <p className="productMaterials text-lg flex flex-wrap text-center font-montserrat font-semibold text-neutral-800"> {ingredients.join(", ")} </p>
         </div>
 
     </div>
 
     <div className="productCardFooter w-full flex items-center justify-between px-10">
         
-        <div className="productPriceWrapper h-full flex justify-end items-end font-sans text-neutral-950">
-            <h2 className="productPrice text-2xl"> $<span className='font-semibold'>{price}</span></h2>
+        <div className="productPriceWrapper h-full flex justify-end items-end font-sans text-neutral-800">
+            <h2 className="productPrice text-2xl"> $<span className='font-semibold font-montserrat'>{price}</span></h2>
         </div>
 
         <div className="footerButtonsWrapper flex justify-center items-center gap-2">

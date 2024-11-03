@@ -16,7 +16,10 @@ export default {
       'mono': ['ui-monospace', 'SFMono-Regular',],
       'display': ['Oswald'],
       'body': ['"Open Sans"'],
-      'Poppins' : ["Poppins" , "sans"],
+      'poppins' : ["poppins" , "sans"],
+      'roboto': ["roboto" , "sans"],
+      'open-sans' : ["open-sans" , "sans"] , 
+      'montserrat' : ["montserrat","sans"]
     },
 
     colors: {

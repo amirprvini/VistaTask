@@ -47,7 +47,7 @@ const handleRemoveIngredients = (data:string) =>{
       </div>
 
       <div className="mt-4">
-        <p className="font-semibold mb-2 text-lg text-gray-700">Ingredients:</p>
+        <p className="font-semibold mb-2 text-lg text-neutral-900">Ingredients:</p>
         <ul className="ingredientsList min-h-16 p-2 flex gap-2 flex-wrap rounded-md border-2 border-neutral-300">
           {ingredientsProp.map((ingredient, index) => (
             <li key={index} >

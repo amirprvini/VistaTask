@@ -73,7 +73,7 @@ const handleCloseForm = (e: React.FormEvent): void => {
   return <form onSubmit={formik.handleSubmit} className={`productForm flex flex-col justify-around gap-3 bg-white rounded-sm py-6 px-8 text-black h-100vh w-[430px] h-screen transition ease-linear delay-300`}>
     <header className="formHeader w-full flex justify-between">
         <div className="headerTitleWrapper">
-            <h3 className="formHaderTitle text-2xl text-gray-900">
+            <h3 className="formHaderTitle text-2xl text-gray-950 font-montserrat">
                 Add new product
             </h3>
         </div>
@@ -102,7 +102,7 @@ const handleCloseForm = (e: React.FormEvent): void => {
     <div className="checkBoxWrapper flex items-center gap-4 pl-3">
         <input type="checkbox" className='scale-[3]' name="vegan" checked={formik.values.vegan} onChange={formik.handleChange} onBlur={formik.handleBlur} />
         <img src="https://img.icons8.com/?size=100&id=O63wamyU8HXl&format=png&color=000000" alt="veganIcon" width={"25px"} className='ml-3'/>
-        <label htmlFor="vegan" className='font-semibold text-lg text-neutral-900'>Suitable for vegans</label>
+        <label htmlFor="vegan" className='font-semibold font-poppins text-lg text-neutral-900'>Suitable for vegans</label>
     </div>
 
     <div className="weight-Calories-Wrapper w-full flex gap-2 justify-between">
@@ -130,7 +130,7 @@ const handleCloseForm = (e: React.FormEvent): void => {
 
     <div className="uploadImgWrapper flex justify-between items-center">
         <div className="titleWrapper flex flex-col">
-            <p className="title font-semibold text-lg text-neutral-900">Upload photo</p>
+            <p className="title font-semibold text-lg text-neutral-950">Upload photo</p>
             <p className="text-neutral-500">JPG,max,2MB</p>
         </div>
 
@@ -143,7 +143,7 @@ const handleCloseForm = (e: React.FormEvent): void => {
                 <span className='text-sm'> <FaPlus /> </span>
                 <span className='text-lg'> <FaBowlFood /> </span>
             </div>
-            <p className="font-semibold text-lg text-neutral-200">Add product to the menu</p>
+            <p className="text-lg text-neutral-200 font-roboto">Add product to the menu</p>
     </button>
 
   </form>

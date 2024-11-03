@@ -1,10 +1,9 @@
 import React, { useContext, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { AppContext } from '../../../context/store';
 import { useLocation } from 'react-router-dom';
 import { useAppDispatch, useApplicationSelector } from '../../../redux/store';
 import { filterProducts } from '../../../redux/features/tasks/productsSlice';
+import { IoSearch } from "react-icons/io5";
 
 const SearchInput: React.FC = (): JSX.Element => {
 
@@ -55,13 +54,13 @@ const SearchInput: React.FC = (): JSX.Element => {
         onBlur={handleBlur}
         onChange={handleChange}
         placeholder="Search"
-        className="w-full bg-gray-100 p-3 pl-10 border-b-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:bg-white placeholder:text-center placeholder:text-gray-700 placeholder:font-semibold"
+        className="w-full bg-gray-100 p-3 pl-10 border-b-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:bg-white placeholder:text-center placeholder:text-neutral-800 placeholder:font-semibold"
       />
 
       <button
         onClick={handleSearch}
         className="absolute inset-y-0 left-2 flex items-center pr-3">
-        <FontAwesomeIcon icon={faSearch} className="text-gray-500" />
+        <span className='text-xl'><IoSearch /></span>
       </button>
       
     </div>

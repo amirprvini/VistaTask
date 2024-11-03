@@ -10,6 +10,7 @@ import { useLocation } from 'react-router-dom';
 import * as Yup from 'yup'; 
 import { FaPlus } from "react-icons/fa6";
 import { FaBowlFood } from "react-icons/fa6";
+import { MdClose } from "react-icons/md";
 
 const ProductForm: React.FC = (): JSX.Element => {
     
@@ -77,14 +78,14 @@ const handleCloseForm = (e: React.FormEvent): void => {
             </h3>
         </div>
 
-        <button className="closeFormButton" onClick={handleCloseForm}>
-            <img src="https://img.icons8.com/?size=100&id=8112&format=png&color=000000" alt="cliseFormButtonIcon" width={"30px"} />
+        <button className="closeFormButton text-4xl text-neutral-500" onClick={handleCloseForm}>
+            <MdClose />
         </button>
     </header>
 
     <div className="productNameWrapper flex flex-col">
-        <label htmlFor="title font-bold text-lg" className='font-semibold text-lg text-gray-700'>Name of the product</label>
-        <input onChange={formik.handleChange} value={formik.values.title} type="text" name='title' id='title' className='w-full pl-3 mt-2 h-12 rounded-md border-2 border-neutral-300'/>
+        <label htmlFor="title font-bold text-lg" className='font-semibold text-lg text-neutral-900'>Name of the product</label>
+        <input onChange={formik.handleChange} value={formik.values.title} type="text" name='title' id='title' className='w-full pl-3 mt-1 h-12 rounded-md border-2 border-neutral-300'/>
     </div>
 
     <div className="productIngredientsWrapper">
@@ -99,45 +100,45 @@ const handleCloseForm = (e: React.FormEvent): void => {
     </div>
 
     <div className="checkBoxWrapper flex items-center gap-4 pl-3">
-        <input type="checkbox" className='scale-[2]' name="vegan" checked={formik.values.vegan} onChange={formik.handleChange} onBlur={formik.handleBlur} />
-        <img src="https://img.icons8.com/?size=100&id=O63wamyU8HXl&format=png&color=000000" alt="veganIcon" width={"40px"} className='ml-3'/>
-        <label htmlFor="vegan" className='font-semibold text-lg text-gray-700'>Suitable for vegans</label>
+        <input type="checkbox" className='scale-[3]' name="vegan" checked={formik.values.vegan} onChange={formik.handleChange} onBlur={formik.handleBlur} />
+        <img src="https://img.icons8.com/?size=100&id=O63wamyU8HXl&format=png&color=000000" alt="veganIcon" width={"25px"} className='ml-3'/>
+        <label htmlFor="vegan" className='font-semibold text-lg text-neutral-900'>Suitable for vegans</label>
     </div>
 
     <div className="weight-Calories-Wrapper w-full flex gap-2 justify-between">
 
         <div className='wightWrapper w-5/6 flex flex-col'>
-            <label htmlFor="weight" className='font-semibold text-lg text-gray-700'>Weight in grams</label>
-            <input onChange={formik.handleChange} value={formik.values.weight} type="text" name='weight' id='weight' className='w-full pl-3 mt-2 h-12 rounded-md border-2 border-neutral-300'/>
+            <label htmlFor="weight" className='font-semibold text-lg text-neutral-900'>Weight in grams</label>
+            <input onChange={formik.handleChange} value={formik.values.weight} type="text" name='weight' id='weight' className='w-full pl-3 mt-1 h-12 rounded-md border-2 border-neutral-300'/>
         </div>
         <div className='caloriesWrapper w-5/6 flex flex-col'>
-            <label htmlFor="calories" className='font-semibold text-lg text-gray-700'>Calories</label>
-            <input onChange={formik.handleChange} value={formik.values.calories} type="text" name='calories' id='calories' className='w-full mt-2 pl-3 h-12 rounded-md border-2 border-neutral-300'/>
+            <label htmlFor="calories" className='font-semibold text-lg text-neutral-900'>Calories</label>
+            <input onChange={formik.handleChange} value={formik.values.calories} type="text" name='calories' id='calories' className='w-full mt-1 pl-3 h-12 rounded-md border-2 border-neutral-300'/>
         </div>
     </div>
 
     <div className="productPriceWrapper flex flex-col">
-        <label htmlFor="productPrice" className='font-semibold text-lg text-gray-700'>Price of the product</label>
+        <label htmlFor="productPrice" className='font-semibold text-lg text-neutral-900'>Price of the product</label>
     
         <div className="relative w-full">
-            <span className="absolute mr-3 pt-2 inset-y-0 left-0 flex items-center pl-6 text-gray-900 font-bold text-lg">$</span>
+            <span className="absolute mr-3 pt-1 inset-y-0 left-0 flex items-center pl-6 text-gray-900 font-bold text-lg">$</span>
             <input onChange={formik.handleChange} value={formik.values.price} type="text" name="price" id="price" 
-            className="pl-10 w-full text-lg mt-2 h-12 rounded-md border-2 border-neutral-300 focus:outline-none focus:ring-2 focus:ring-black" />
+            className="pl-10 w-full text-lg mt-1 h-12 rounded-md border-2 border-neutral-300 focus:outline-none focus:ring-2 focus:ring-black" />
         </div>
 
     </div>
 
     <div className="uploadImgWrapper flex justify-between items-center">
         <div className="titleWrapper flex flex-col">
-            <p className="title font-semibold text-lg text-gray-700">Upload photo</p>
-            <p className="text-gray-500">JPG,max,2MB</p>
+            <p className="title font-semibold text-lg text-neutral-900">Upload photo</p>
+            <p className="text-neutral-500">JPG,max,2MB</p>
         </div>
 
         <ImageUploadButton />
 
     </div>
 
-    <button type='submit' className='submitButton bg-neutral-800 text-white w-full rounded-lg px-4 py-3 flex justify-center items-center gap-2'>
+    <button type='submit' className='submitButton bg-neutral-800 text-white w-full rounded-lg px-4 py-2 flex justify-center items-center gap-2'>
             <div className="submitIcons flex items-center gap-2 mr-3">
                 <span className='text-sm'> <FaPlus /> </span>
                 <span className='text-lg'> <FaBowlFood /> </span>

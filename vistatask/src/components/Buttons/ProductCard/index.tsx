@@ -76,7 +76,7 @@ const ProductCard: React.FC<ProductCardProps> = ({vagan,title,id,price,calories,
 
     })}
 
-    return <div className='productCardWrapper min-h-80 relative cursor-pointer hover:scale-105 transition-all duration-150 w-80 bg-white rounded-2xl shadow-md text-black font-mono flex flex-col items-center py-5' 
+    return <div className='productCardWrapper min-h-80 relative cursor-pointer hover:scale-105 transition-all duration-150 w-80 bg-white rounded-2xl shadow-md text-black font-sans flex flex-col items-center justify-around py-5' 
   onClick={onClickProp}>
 
     <div className="veganWrapper w-full flex justify-end px-8 h-8">
@@ -90,33 +90,33 @@ const ProductCard: React.FC<ProductCardProps> = ({vagan,title,id,price,calories,
     <div className="productInfoWrapper h-min w-full flex flex-col justify-between px-4 font-dana my-7">
 
         <div className="productTitleWrapper w-full flex justify-center">
-            <h1 className="productTitle text-2xl font-bold text-center"> {title} </h1>
+            <h1 className="productTitle text-xl font-bold text-center text-neutral-900"> {title} </h1>
         </div>
 
         <div className="productWeightWrapper w-full flex justify-center">
-            <p className="productWeight text-xl text-gray-600 "> {weight} </p>
+            <p className="productWeight text-md text-neutral-600 font-semibold "> {weight} </p>
         </div>
 
         <div className="productMaterialsWrapper w-full flex justify-center h-12">
-            <p className="productMaterials text-lg flex flex-wrap text-center font-sans font-semibold text-gray-700"> {ingredients.join(", ")} </p>
+            <p className="productMaterials text-lg flex flex-wrap text-center font-sans font-semibold text-neutral-800"> {ingredients.join(", ")} </p>
         </div>
 
     </div>
 
-    <div className="productCardFooter w-full flex items-center justify-between px-8">
+    <div className="productCardFooter w-full flex items-center justify-between px-10">
         
-        <div className="productPriceWrapper h-full flex justify-end items-end font-sans text-gray-800">
+        <div className="productPriceWrapper h-full flex justify-end items-end font-sans text-neutral-900">
             <h2 className="productPrice text-2xl"> $<span className='font-semibold'>{price}</span></h2>
         </div>
 
-        <div className="footerButtonsWrapper flex justify-center items-center gap-3">
+        <div className="footerButtonsWrapper flex justify-center items-center gap-2">
             
-            <button className={`readOnlyButton p-3 rounded-md border border-neutral-300 ${readOnly && 'bg-gray-300'}`} onClick={handleReadOnly}>
-                <img src={readOnly ? `https://img.icons8.com/?size=100&id=89236&format=png&color=000000` : `https://img.icons8.com/?size=100&id=60022&format=png&color=000000`} alt="readOnlyButton" width={"25px"} />
+            <button className={`readOnlyButton px-3 py-2 rounded-lg border border-neutral-300 ${readOnly && 'bg-gray-300'}`} onClick={handleReadOnly}>
+                <img src={readOnly ? `https://img.icons8.com/?size=100&id=89236&format=png&color=000000` : `https://img.icons8.com/?size=100&id=60022&format=png&color=000000`} alt="readOnlyButton" width={"20px"} />
             </button>
 
-            <button className={`editInfoButton p-3 rounded-md border border-neutral-300`} onClick={handleEditButton}>
-                <img src="https://img.icons8.com/?size=100&id=2969&format=png&color=000000" alt="moreInfo" width={"25px"} />
+            <button className={`editInfoButton px-3 py-2 rounded-lg border border-neutral-300`} onClick={handleEditButton}>
+                <img src="https://img.icons8.com/?size=100&id=2969&format=png&color=000000" alt="moreInfo" width={"20px"} />
             </button>
 
         </div>

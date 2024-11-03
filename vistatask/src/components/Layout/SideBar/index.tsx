@@ -1,8 +1,7 @@
 import {useEffect} from "react";
 import SideBarButton from "../../Buttons/SideBarButton"
 import { useLocation, useNavigate } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { IoSend } from "react-icons/io5";
 
 const SideBar: React.FC = (): JSX.Element =>{
 
@@ -63,15 +62,15 @@ const SideBar: React.FC = (): JSX.Element =>{
         <footer className="sideBarFooter w-full flex flex-col justify-center gap-8 sticky mt-auto">
             <div className="top flex flex-col justify-center px-6">
                 <p className="text-center text-neutral-800 font-semibold mb-1">Done for the day?</p>
-                <button className="flex items-center justify-center mt-2 px-2 py-3 text-white rounded-lg bg-gradient-to-r from-emerald-400 to-green-400 hover:from-green-500 hover:to-green-700 focus:outline-none">
-                <FontAwesomeIcon icon={faPaperPlane} className="mr-2" />
+                <button className="flex gap-3 items-center justify-center mt-2 px-1 py-3 text-white rounded-lg bg-gradient-to-r from-emerald-400 to-green-500 hover:from-green-500 hover:to-green-700 focus:outline-none">
+                <span className="text-xl"> <IoSend /> </span>
                     Send daily report
                 </button>
             </div>
 
             <div className="avatarWrapper flex justify-around items-center pt-3 pb-1 px-3 border-t-[1px] border-neutral-200">
                 <img src="https://img.icons8.com/?size=100&id=108652&format=png&color=000000" alt="avatar" width={"55px"} />
-                <p className="username text-neutral-900 font-semibold text-lg"> Amir Parvini </p>
+                <p className="username text-neutral-950 font-semibold text-lg"> Amir Parvini </p>
                 <img src="https://img.icons8.com/ios-filled/30/menu-2.png" alt="menuIcon"/>
             </div>
         </footer>

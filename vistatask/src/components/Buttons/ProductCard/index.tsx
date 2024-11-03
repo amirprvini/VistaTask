@@ -89,7 +89,7 @@ const ProductCard: React.FC<ProductCardProps> = ({vagan,title,id,price,calories,
         <img src={image} alt="ProductPhoto" width={"150px"} className="absolute -top-8"/>
     </div>
 
-    <div className="productInfoWrapper h-min w-full flex flex-col justify-between px-4 font-dana my-7">
+    <div className="productInfoWrapper h-min w-full flex flex-col justify-between px-4 font-dana mb-7 mt-11">
 
         <div className="productTitleWrapper w-full flex justify-center">
             <h1 className="productTitle text-xl font-bold text-center text-neutral-900"> {title} </h1>

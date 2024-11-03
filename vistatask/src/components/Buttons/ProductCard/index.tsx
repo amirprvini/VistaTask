@@ -78,7 +78,7 @@ const ProductCard: React.FC<ProductCardProps> = ({vagan,title,id,price,calories,
 
     })}
 
-    return <div className='productCardWrapper min-h-72 relative cursor-pointer hover:scale-105 transition-all duration-150 w-72 bg-white rounded-2xl shadow-md text-black font-sans flex flex-col items-center justify-around py-5' 
+    return <div className='productCardWrapper min-h-80 relative cursor-pointer hover:scale-105 transition-all duration-150 w-80 bg-white rounded-2xl shadow-md text-black font-sans flex flex-col items-center justify-around py-5' 
   onClick={onClickProp}>
 
     <div className="veganWrapper w-full flex justify-end px-3 h-8 relative">
@@ -89,7 +89,7 @@ const ProductCard: React.FC<ProductCardProps> = ({vagan,title,id,price,calories,
         <img src={image} alt="ProductPhoto" width={"150px"} className="absolute -top-8"/>
     </div>
 
-    <div className="productInfoWrapper h-min w-full flex flex-col justify-between px-4 font-dana mb-7 mt-11">
+    <div className="productInfoWrapper h-min w-full flex flex-col justify-between px-4 font-dana my-7">
 
         <div className="productTitleWrapper w-full flex justify-center">
             <h1 className="productTitle text-xl font-bold text-center text-neutral-900"> {title} </h1>
